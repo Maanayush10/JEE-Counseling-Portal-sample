@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock title %}
+{% block style %}
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+.collapse{
+    font-family: 'Teko', sans-serif;
+}
+
+        
+{% endblock style %}
+{% block nav %}
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+
+{% endblock nav %}
+{% block body %}
+
+<div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 class="text-body-emphasis">Congratulations,  {{request.user}}</h1>
+      <p class="lead">
+        Rank: {{rank}}
+      </p>
+      <p class="lead">
+        College : {{college}}
+      </p>
+      <p class="lead">
+        Branch : {{branch}}
+      </p>
+    </div>
+  </div>
+<script src="/static/js/scriptDash.js"></script>
+{% endblock body %}

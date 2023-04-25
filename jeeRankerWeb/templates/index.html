@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/static/agreement.png" title="welcome icons" alt="" width="100" height="100">
+  <h1 class="display-5 fw-bold text-body-emphasis">Welcome.</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Introducing our JEE counseling web application, designed to provide students with comprehensive guidance and support throughout the college admission process.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a href="/login" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Login</button>
+        <a href="/newUser" style="text-decoration: none;"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Register</button>
+    </div>
+  </div>
+</div>
+{% comment %} <h1 class="text-center">Welcome</h1>
+<div class="container text-center">
+  <a href="/login" style="text-decoration: none;"><button type="button" class="btn btn-primary">Login</button>
+    <a href="/newUser" style="text-decoration: none;"><button type="button" class="btn btn-secondary">Register</button>
+</div> {% endcomment %}
+{% endblock body %}
